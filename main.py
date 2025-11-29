@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
     train_loader, val_loader = get_dataloaders(dataset_path, batch_size=config["batch_size"], num_workers=2)
 
-    wandb.init(project='AML-lab03', config=config)
+    wandb.init(project='AML-lab', name='lab03-CustomNet2', config=config)
 
     model = CustomNet2().to(device)
     criterion = torch.nn.CrossEntropyLoss()
